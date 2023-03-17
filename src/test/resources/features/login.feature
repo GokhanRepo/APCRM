@@ -11,20 +11,20 @@ Feature: apcrm app login functionality and verification
 
   @marketing @employee
   Scenario: Login as marketing
-    When user enters marketing username
-    And user enters marketing password
+    When user enters "marketing" username
+    And user enters "marketing" password
     Then user should see the activity stream page
 
   @helpdesk @employee
   Scenario: Login as helpdesk
-    When user enters helpdesk username
-    And user enters helpdesk password
+    When user enters "helpdesk" username
+    And user enters "helpdesk" password
     Then user should see the activity stream page
 
   @hr @employee
   Scenario: Login as hr
-    When user enters hr username
-    And user enters hr password
+    When user enters "hr" username
+    And user enters "hr" password
     Then user should see the activity stream page
 
 #this is a comment

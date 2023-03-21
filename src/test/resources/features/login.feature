@@ -9,7 +9,7 @@ Feature: apcrm app login functionality and verification
   Background: For the scenarios in the feature file, user is expected to be on login page
     Given user is on the apcrm login page
 
-  @marketing @employee
+  @marketing
   Scenario Outline: Login as marketing
     When user enters "<username>" username
     And user enters "<password>" password
@@ -21,7 +21,7 @@ Feature: apcrm app login functionality and verification
       | marketing99@cybertekschool.com | UserUser |
 
 
-  @helpdesk @employee
+  @helpdesk
   Scenario Outline: Login as helpdesk
     When user enters "<username>" username
     And user enters "<password>" password
@@ -33,7 +33,7 @@ Feature: apcrm app login functionality and verification
       | helpdesk99@cybertekschool.com | UserUser |
 
 
-  @hr @employee
+  @hr
   Scenario Outline: Login as hr
     When user enters "<username>" username
     And user enters "<password>" password
@@ -47,22 +47,3 @@ Feature: apcrm app login functionality and verification
 
 
 #this is a comment
-
-#
-#  @marketing @employee
-#  Scenario: Login as marketing
-#    When user enters "marketing" username
-#    And user enters "marketing" password
-#    Then user should see the activity stream page
-#
-#  @helpdesk @employee
-#  Scenario: Login as helpdesk
-#    When user enters "helpdesk" username
-#    And user enters "helpdesk" password
-#    Then user should see the activity stream page
-#
-#  @hr @employee
-#  Scenario: Login as hr
-#    When user enters "hr" username
-#    And user enters "hr" password
-#    Then user should see the activity stream page

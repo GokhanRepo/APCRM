@@ -11,7 +11,7 @@ public class LoginPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(css = "input[name='USER_LOGIN']")
+    @FindBy(name="USER_LOGIN")
     public  WebElement loginInput;
     @FindBy(xpath = "//input[@name='USER_PASSWORD']")
     public  WebElement passwordInput;

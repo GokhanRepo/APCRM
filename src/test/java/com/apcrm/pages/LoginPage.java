@@ -19,7 +19,6 @@ public class LoginPage {
     public  WebElement loginButton;
 
 
-
     /**
      * This method will log in using credentials from configuration.properties
      */

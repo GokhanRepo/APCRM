@@ -22,8 +22,6 @@ public class LoginPage {
 
     /**
      * This method will log in using credentials from configuration.properties
-     * @param username
-     * @param password
      */
 
     public void loginWithConfiguration() {

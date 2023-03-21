@@ -1,4 +1,4 @@
-@Regression @login
+@Regression @smoke @login
 Feature: apcrm app login functionality and verification
   User Story:
   As a user, I should be able to login with correct credentials to different

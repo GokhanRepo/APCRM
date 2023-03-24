@@ -54,7 +54,7 @@ public class Driver {
                 case "chrome":
 
                     ChromeOptions options = new ChromeOptions();
-                    options.addArguments("--remote-allow-origins=*");
+                    options.addArguments("--remote-allow-origins=*"); // to overcome chrome111 security issue
 
                     WebDriverManager.chromedriver().setup();
                     driverPool.set(new ChromeDriver());

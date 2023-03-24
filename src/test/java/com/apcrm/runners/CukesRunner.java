@@ -13,7 +13,7 @@ import org.junit.runner.*;
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber", // pretty reports
         },
         features = "src/test/resources/features", // path to features
-        glue = "apcrm/step_definitions", // path to step definitions
+        glue = "com/apcrm/step_definitions", // path to step definitions
         dryRun = false, // set to true to check if all steps have code
         tags = "@hr",
         publish = false // set to true to publish to the dashboard

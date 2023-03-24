@@ -28,6 +28,7 @@ public class Login_StepDefinitions {
     @Then("user should see the activity stream page")
     public void user_should_see_the_activity_stream_page() {
         loginPage.loginButton.click();
+        //Assert.assertEquals("Activity Stream", activityStream.pageTitle.getText());
     }
 
 }

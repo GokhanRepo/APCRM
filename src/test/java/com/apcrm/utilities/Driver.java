@@ -20,7 +20,8 @@ public class Driver {
     Creating a private constructor, so we are closing
     access to the object of this class from outside the class
      */
-    private Driver(){}
+    private Driver() {
+    }
 
     /*
     We make WebDriver private, because we want to close access from outside the class.
@@ -33,9 +34,9 @@ public class Driver {
     /*
     Create a re-usable utility method which will return same driver instance when we call it
      */
-    public static WebDriver getDriver(){
+    public static WebDriver getDriver() {
 
-        if (driverPool.get() == null){
+        if (driverPool.get() == null) {
 
             /*
             We read our browserType from configuration.properties.
@@ -48,7 +49,7 @@ public class Driver {
                 Depending on the browserType that will be return from configuration.properties file
                 switch statement will determine the case, and open the matching browser
             */
-            switch (browserType){
+            switch (browserType) {
                 case "chrome":
 
                     WebDriverManager.chromedriver().setup();
@@ -66,29 +67,29 @@ public class Driver {
                     // assign your grid server address
                     String gridAdress = "54.160.46.104"; // put your own Linux grid IP here
                     try {
-                        URL url = new URL("http://"+gridAdress+":4444/wd/hub");
+                        URL url = new URL("http://" + gridAdress + ":4444/wd/hub");
                         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
                         desiredCapabilities.setBrowserName("chrome");
-                        driverPool.set(new RemoteWebDriver(url,desiredCapabilities));
+                        driverPool.set(new RemoteWebDriver(url, desiredCapabilities));
                         driverPool.get().manage().window().maximize();
                         driverPool.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                     } catch (MalformedURLException e) {
                         e.printStackTrace();
                     }
-                 break;
+                    break;
                 case "saucelab-chrome":
-                    try{
+                    try {
                         URL url = new URL("https://oauth-sdetoscar-844c8:66e7117f-390e-4556-8105-07af96a01f7a@ondemand.eu-central-1.saucelabs.com:443/wd/hub");
                         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
                         desiredCapabilities.setBrowserName("chrome");
-                        driverPool.set(new RemoteWebDriver(url,desiredCapabilities));
+                        driverPool.set(new RemoteWebDriver(url, desiredCapabilities));
                         driverPool.get().manage().window().maximize();
                         driverPool.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-                    }catch (MalformedURLException e){
+                    } catch (MalformedURLException e) {
                         e.printStackTrace();
                     }
 
-            break;
+                    break;
                 case "saucelab-edge":
                     EdgeOptions browserOptions = new EdgeOptions();
                     browserOptions.setCapability("platformName", "Windows 11");
@@ -101,7 +102,7 @@ public class Driver {
                     URL url = null;
                     try {
                         url = new URL("https://oauth-sdetoscar-844c8:66e7117f-390e-4556-8105-07af96a01f7a@ondemand.eu-central-1.saucelabs.com:443/wd/hub");
-                        driverPool.set(new RemoteWebDriver(url,browserOptions));
+                        driverPool.set(new RemoteWebDriver(url, browserOptions));
                         driverPool.get().manage().window().maximize();
                         driverPool.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                     } catch (MalformedURLException e) {
@@ -120,8 +121,8 @@ public class Driver {
     /*
     This method will make sure our driver value is always null after using quit() method
      */
-    public static void closeDriver(){
-        if (driverPool.get() != null){
+    public static void closeDriver() {
+        if (driverPool.get() != null) {
             driverPool.get().quit(); // this line will terminate the existing session. value will not even be null
             driverPool.remove();
         }

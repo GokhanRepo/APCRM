@@ -41,8 +41,8 @@ Feature: apcrm app login functionality and verification
 
     Examples:
       | username                | password |
+      | hr1@cybertekschool.com  | UserUser |
       | hr10@cybertekschool.com | UserUser |
-      | hr99@cybertekschool.com | UserUser |
 
 
 

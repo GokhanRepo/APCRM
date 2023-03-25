@@ -36,7 +36,7 @@ public class Driver {
     Create a re-usable utility method which will return same driver instance when we call it
      */
     public static WebDriver getDriver() {
-
+  	ChromeOptions options = new ChromeOptions();
         if (driverPool.get() == null) {
 
             /*
@@ -53,7 +53,7 @@ public class Driver {
             switch (browserType) {
                 case "chrome":
 
-                    ChromeOptions options = new ChromeOptions();
+
                     options.addArguments("--remote-allow-origins=*"); // to overcome chrome111 security issue
 
                     WebDriverManager.chromedriver().setup();

@@ -38,7 +38,7 @@ public class Driver {
      */
     public static WebDriver getDriver() {
 
-        options.addArguments("--remote-allow-orfigins=*"); // to overcome chrome111 security issue
+        options.addArguments("--remote-allow-origins=*"); // to overcome chrome111 security issue
 
         if (driverPool.get() == null) {
 

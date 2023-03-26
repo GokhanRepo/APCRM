@@ -16,7 +16,6 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 public class Driver {
-  	ChromeOptions options = new ChromeOptions();
 
     /*
     Creating a private constructor, so we are closing
@@ -37,7 +36,7 @@ public class Driver {
     Create a re-usable utility method which will return same driver instance when we call it
      */
     public static WebDriver getDriver() {
-
+        ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*"); // to overcome chrome111 security issue
 
         if (driverPool.get() == null) {

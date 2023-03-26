@@ -1,6 +1,6 @@
 node {
     stage('Clone code') {
-        git 'https://github.com/GokhanRepo/private-demo-project.git'
+        git 'https://github.com/GokhanRepo/APCRM.git'
     }
         
     stage('Run tests'){

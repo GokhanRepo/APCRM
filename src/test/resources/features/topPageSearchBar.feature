@@ -1,4 +1,4 @@
-@Regression @login
+@wip @APCRM-301
 Feature: Top-page search bar functionality and verification
   User Story:
   As a user, I should be able to find people, documents and more by using top-page search bar;
@@ -22,10 +22,14 @@ Feature: Top-page search bar functionality and verification
     Then user should see "Quote.docx" in the search result
 
 
-
   @marketing @helpdesk @hr
   Scenario: Search for groups
     When user enters "Technology" into the top-page search bar
     Then user should see "Technology" workgroup in the search result
 
-  #PR and advertising is not in the result because it is private ?????
+
+  #PR and advertising is not in the result because it is private ??????
+#  @marketing
+#  Scenario: Search for private groups
+#    When user enters "PR and advertising" into the top-page search bar
+#    Then user should see "PR and advertising" workgroup in the search result

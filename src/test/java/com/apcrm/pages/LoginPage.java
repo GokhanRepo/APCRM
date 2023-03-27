@@ -11,22 +11,24 @@ public class LoginPage {
     }
 
     @FindBy(css = "input[name='USER_LOGIN']")
-    public WebElement loginInput;
+    public WebElement userLoginInput;
     @FindBy(xpath = "//input[@name='USER_PASSWORD']")
-    public WebElement passwordInput;
+    public WebElement UserPasswordInput;
     @FindBy(css = "input[class='login-btn']")
     public WebElement loginButton;
 
+    @FindBy(css = "div[id='pagetitle']")
+    public WebElement activityStreamPageTitle; // CHECK THIS TODO
 
     /**
      * This method will log in using credentials from configuration.properties
      */
     public void loginWithConfiguration() {
-        //String url = ConfigurationReader.getProperty("apcrmUrl");
-        //Driver.getDriver().get(ConfigurationReader.getProperty("apcrmUrl"));
-        //loginInput.sendKeys(ConfigurationReader.getProperty("loginUsername"));
-        //passwordInput.sendKeys(ConfigurationReader.getProperty("loginPassword"));
-        //loginButton.click();
+        // String url = ConfigurationReader.getProperty("apcrmUrl");
+        // Driver.getDriver().get(ConfigurationReader.getProperty("apcrmUrl"));
+        // loginInput.sendKeys(ConfigurationReader.getProperty("loginUsername"));
+        // UserPasswordInput.sendKeys(ConfigurationReader.getProperty("loginPassword"));
+        // loginButton.click();
     }
 
 }

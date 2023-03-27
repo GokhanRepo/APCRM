@@ -1,8 +1,7 @@
 @Regression @smoke @login
 Feature: apcrm app login functionality and verification
-  User Story:
-  As a user, I should be able to login with correct credentials to different
-  accounts. And activity stream page should be displayed.
+
+  User Story: As a user, I should be able to login with correct credentials to different accounts. And activity stream page should be displayed.
 
   Accounts are: marketing, helpdesk, hr
 
@@ -13,6 +12,7 @@ Feature: apcrm app login functionality and verification
   Scenario Outline: Login as marketing
     When user enters "<username>" username
     And user enters "<password>" password
+    And user clicks on login button
     Then user should see the activity stream page
 
     Examples:
@@ -25,6 +25,7 @@ Feature: apcrm app login functionality and verification
   Scenario Outline: Login as helpdesk
     When user enters "<username>" username
     And user enters "<password>" password
+    And user clicks on login button
     Then user should see the activity stream page
 
     Examples:
@@ -37,6 +38,7 @@ Feature: apcrm app login functionality and verification
   Scenario Outline: Login as hr
     When user enters "<username>" username
     And user enters "<password>" password
+    And user clicks on login button
     Then user should see the activity stream page
 
     Examples:

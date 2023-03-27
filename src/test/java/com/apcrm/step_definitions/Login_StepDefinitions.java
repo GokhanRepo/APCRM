@@ -1,11 +1,13 @@
 package com.apcrm.step_definitions;
 
+import com.apcrm.pages.LoginPage;
 import com.apcrm.utilities.ConfigurationReader;
 import com.apcrm.utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import com.apcrm.pages.LoginPage;
+import org.junit.Assert;
 
 public class Login_StepDefinitions {
     LoginPage loginPage = new LoginPage();
@@ -17,18 +19,28 @@ public class Login_StepDefinitions {
 
     @When("user enters {string} username")
     public void user_enters_username(String username) {
-        loginPage.loginInput.sendKeys(username);
+        loginPage.userLoginInput.sendKeys(username);
     }
 
     @When("user enters {string} password")
     public void user_enters_password(String password) {
-        loginPage.passwordInput.sendKeys(password);
+        loginPage.UserPasswordInput.sendKeys(password);
+    }
+
+    @And("user clicks on login button")
+    public void userClicksOnLoginButton() {
+        loginPage.loginButton.click();
     }
 
     @Then("user should see the activity stream page")
     public void user_should_see_the_activity_stream_page() {
-        loginPage.loginButton.click();
-        //Assert.assertEquals("Activity Stream", activityStream.pageTitle.getText());
+
+        Assert.assertEquals("Activity Stream", loginPage.activityStreamPageTitle.getText());
+        System.out.println("The title of the page after login is " + loginPage.activityStreamPageTitle.getText());
     }
 
+
 }
+
+
+

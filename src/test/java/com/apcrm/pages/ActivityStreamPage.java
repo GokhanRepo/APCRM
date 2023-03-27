@@ -5,22 +5,22 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ActivityStream {
+public class ActivityStreamPage {
 
 
-    public ActivityStream() {
+    public ActivityStreamPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
 
     @FindBy(css = "div[id='pagetitle']")
-    public WebElement pageTitle;
+    public WebElement activityStreamPageTitle;
 
     @FindBy(css = "input[id='search-textbox-input']")
-    public WebElement searchBox;
+    public WebElement topPageSearchBox;
 
-    @FindBy(css = "input[id='search-submit']")
-    public WebElement searchButton;
+    @FindBy(xpath = "//span[contains(@class, 'header-search-icon')]")
+    public WebElement topPageSearchSubmitButton;
 
 
 }

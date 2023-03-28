@@ -55,7 +55,7 @@ Feature: apcrm app login functionality and verification
 
     Examples:
       | username                       | password |
-      | marketin@cybertekschool.com    | UserUser |
+      | marketing@cybertekschool.com   | UserUser |
       | marketing99@cybertekschool.com | AbcZxy   |
 
 

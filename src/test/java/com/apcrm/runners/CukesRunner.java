@@ -15,7 +15,7 @@ import org.junit.runner.*;
         features = "src/test/resources/features", // path to features
         glue = "com/apcrm/step_definitions", // path to step definitions
         dryRun = false, // set to true to check if all steps have code
-        tags = "@hr and @login",
+        tags = "@APCRM-439",
         publish = false // set to true to publish to the dashboard
 
 )

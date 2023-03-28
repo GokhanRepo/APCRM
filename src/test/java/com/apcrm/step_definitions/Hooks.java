@@ -47,7 +47,7 @@ public class Hooks {
         //System.out.println("====Scenario ended/ Take screenshot if failed!");
     }
 
-    // @BeforeStep
+    //@BeforeStep
     public void setupStep() {
         System.out.println("--------> applying setup using @BeforeStep");
     }

@@ -18,9 +18,9 @@ Feature: Top-page search bar functionality and verification
 #  @marketing @helpdesk @hr
   @APCRM-436
   Scenario: User can see conversations
-    When user enters "Mario Luigi" into the top-page search bar
-    And user clicks on "Mario Luigi" in the conversations section
-    Then user should see conversation about "Mario Luigi" in the result page
+    When user enters "hr1@cybertekschool.com" into the top-page search bar
+    And user clicks on "hr1@cybertekschool.com" in the conversations section
+    Then user should see conversation about "hr1@cybertekschool.com" in the result page
 
 #AC2
 #  @marketing @helpdesk @hr

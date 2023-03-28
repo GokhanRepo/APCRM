@@ -20,6 +20,9 @@ public class LoginPage {
     @FindBy(css = "div[id='pagetitle']")
     public WebElement activityStreamPageTitle;
 
+    @FindBy(css = "div[class='errortext']")
+    public WebElement errorMessage;
+
     /**
      * This method will log in using credentials from configuration.properties
      */

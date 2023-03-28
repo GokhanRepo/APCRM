@@ -21,6 +21,11 @@ public class ResultPage {
     @FindBy(css = "#pagetitle")
     public WebElement groupPageTitle;
 
+    @FindBy(xpath = "//*[@id='pagetitle']")
+    public WebElement pageTitle;
+
+    @FindBy(css = "input[id='LIVEFEED_search']")
+    public WebElement searchedKeyword;
 
 
 

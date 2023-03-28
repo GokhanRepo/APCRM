@@ -40,6 +40,17 @@ public class Login_StepDefinitions {
     }
 
 
+    @Then("user should see {string} message")
+    public void userShouldSeeMessage(String errormessage) {
+        //Assert.assertEquals("Incorrect login or password", loginPage.errorMessage.getText());
+        Assert.assertEquals(errormessage, loginPage.errorMessage.getText());
+        System.out.println("The error message is " + loginPage.errorMessage.getText());
+    }
+
+
+
+
+
 }
 
 

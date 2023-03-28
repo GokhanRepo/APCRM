@@ -1,4 +1,4 @@
-@Regression @smoke @login
+@APCRM-440 @Regression @smoke @login
 Feature: apcrm app login functionality and verification
 
   User Story: As a user, I should be able to login with correct credentials to different accounts. And activity stream page should be displayed.
@@ -8,20 +8,21 @@ Feature: apcrm app login functionality and verification
   Background: For the scenarios in the feature file, user is expected to be on login page
     Given user is on the apcrm login page
 
-  @marketing
-  Scenario Outline: Login as marketing
+
+  @APCRM-441 @hr
+  Scenario Outline: Login as hr
     When user enters "<username>" username
     And user enters "<password>" password
     And user clicks on login button
     Then user should see the activity stream page
 
     Examples:
-      | username                       | password |
-      | marketing10@cybertekschool.com | UserUser |
-      | marketing99@cybertekschool.com | UserUser |
+      | username                | password |
+      | hr1@cybertekschool.com  | UserUser |
+      | hr10@cybertekschool.com | UserUser |
 
 
-  @helpdesk
+  @APCRM-442 @helpdesk
   Scenario Outline: Login as helpdesk
     When user enters "<username>" username
     And user enters "<password>" password
@@ -33,18 +34,30 @@ Feature: apcrm app login functionality and verification
       | helpdesk10@cybertekschool.com | UserUser |
       | helpdesk99@cybertekschool.com | UserUser |
 
-
-  @hr
-  Scenario Outline: Login as hr
+  @APCRM-443 @marketing
+  Scenario Outline: Login as marketing
     When user enters "<username>" username
     And user enters "<password>" password
     And user clicks on login button
     Then user should see the activity stream page
 
     Examples:
-      | username                | password |
-      | hr1@cybertekschool.com  | UserUser |
-      | hr10@cybertekschool.com | UserUser |
+      | username                       | password |
+      | marketing10@cybertekschool.com | UserUser |
+      | marketing99@cybertekschool.com | UserUser |
+
+  @APCRM-444 @hr @helpdesk @marketing
+  Scenario Outline: Login fails with invalid credentials
+    When user enters "<username>" username
+    And user enters "<password>" password
+    And user clicks on login button
+    Then user should see "Incorrect login or password" message
+
+    Examples:
+      | username                       | password |
+      | marketin@cybertekschool.com    | UserUser |
+      | marketing99@cybertekschool.com | AbcZxy   |
+
 
 
 

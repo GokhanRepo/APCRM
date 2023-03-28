@@ -18,7 +18,7 @@ public class LoginPage {
     public WebElement loginButton;
 
     @FindBy(css = "div[id='pagetitle']")
-    public WebElement activityStreamPageTitle; // CHECK THIS TODO
+    public WebElement activityStreamPageTitle;
 
     /**
      * This method will log in using credentials from configuration.properties

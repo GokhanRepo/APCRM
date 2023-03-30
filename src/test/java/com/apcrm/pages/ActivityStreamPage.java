@@ -14,31 +14,41 @@ public class ActivityStreamPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-
     @FindBy(css = "div[id='pagetitle']")
     public WebElement activityStreamPageTitle;
 
     @FindBy(css = "input[id='search-textbox-input']")
     public WebElement topPageSearchBox;
 
-    @FindBy (xpath = "//div[contains(@class, 'search-title-top-block')][.//div[@bx-search-item-id='P918']]")
-    public WebElement topPageSearchConversationsSection;
-
-    @FindBy (xpath = "//html/body/div[4]/div/div[2]/div[1]/div")
-    public WebElement topPageSearchConversationsText;
-
-    @FindBy (xpath = "/html/body/div[4]/div/div[1]/div[2]/div/div[1]/span")
-    public WebElement topPageSearchConversationsIcon;
-
-    @FindBy (xpath = "/html/body/div[4]/div/div[2]/div[2]/div/div[1]/a")
+    @FindBy(xpath = "/html[1]/body[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/a[1]/span[1]/span[1]")
     public WebElement topPageSearchConversationsLink;
 
-    @FindBy (partialLinkText = "blog")
+    @FindBy(xpath = "(//a[contains(@href, 'ile')])")
+//    @FindBy(xpath = "/html/body/div[4]/div/div[1]/div[2]/div/div/a")
+    public WebElement topPageSearchOtherLink;
+
+    @FindBy(xpath = "/html/body/div[4]/div/div[1]/div[2]/div/div/a")
+    // /html[1]/body[1]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/a[1]/span[2]/span[1]
+    public WebElement topPageSearchGroupsLink;
+
+
+
+
+// --------- below are not used yet ------------------
+    @FindBy(xpath = "//div[contains(@class, 'search-title-top-block')][.//div[@bx-search-item-id='P918']]")
+    public WebElement topPageSearchConversationsSection;
+
+    @FindBy(xpath = "//html/body/div[4]/div/div[2]/div[1]/div")
+    public WebElement topPageSearchConversationsText;
+
+    @FindBy(xpath = "/html/body/div[4]/div/div[1]/div[2]/div/div[1]/span")
+    public WebElement topPageSearchConversationsIcon;
+
+    @FindBy(partialLinkText = "blog")
     public List<WebElement> topPageSearchBlogLinks;
 
     @FindBy(xpath = "//span[contains(@class, 'header-search-icon')]")
     public WebElement topPageSearchSubmitButton;
-
 
 
     //  /html/body/div[4]/div/div[2]/div[2]/div/div[1]/a
@@ -48,7 +58,6 @@ public class ActivityStreamPage {
     // driver.findElement(By.partialLinkText("Plastic Spiral Bind")).click();
     // JavascriptExecutor js = (JavascriptExecutor)driver;
     // js.executeScript("arguments[0].click();", element);
-
 
 
     // //div[@class='search-title-top-list search-title-top-list-js']/div[1]  first links in 4 sections of search (Employees, Conversations, Others, Search)

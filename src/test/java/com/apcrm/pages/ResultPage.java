@@ -27,6 +27,9 @@ public class ResultPage {
     @FindBy(css = "input[id='LIVEFEED_search']")
     public WebElement searchedKeyword;
 
+    @FindBy(xpath = "/html[1]/body[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[2]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/div[1]/div[2]/span[1]")
+    public WebElement conversationsPageTitle;
+
 
 
 }

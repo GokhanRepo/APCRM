@@ -49,18 +49,14 @@ public class Login_StepDefinitions {
         BrowserUtils.sleep(5);
     }
 
-    @But("user should see {string} message after {int} tries")
-    public void userShouldSeeMessageAfterFiveTries(String errormessageafter5tries, int fiveOrMore) {
-
-//try {
-
-    //Assert.assertEquals("Please try again after one minute", loginPage.errorMessageAfter5Tries.getText());
-    Assert.assertEquals(errormessageafter5tries, loginPage.errorMessageAfter5Tries.getText());
-    System.out.println("The error message after 5 tries is " + loginPage.errorMessageAfter5Tries.getText());
-    //BrowserUtils.sleep(5);
-
-//} catch (Exception e) {
-//    System.out.println("Exception = " + e.toString());
+//    @But("user should see {string} message after {int} tries")
+//    public void userShouldSeeMessageAfterFiveTries(String errormessageafter5tries, int fiveOrMore) {
+//
+//    //Assert.assertEquals("Please try again after one minute", loginPage.errorMessageAfter5Tries.getText());
+//    Assert.assertEquals(errormessageafter5tries, loginPage.errorMessageAfter5Tries.getText());
+//    System.out.println("The error message after 5 tries is " + loginPage.errorMessageAfter5Tries.getText());
+//    //BrowserUtils.sleep(5);
+//
 //}
 
 
@@ -76,7 +72,7 @@ public class Login_StepDefinitions {
 
 
 
-}
+
 
 
 

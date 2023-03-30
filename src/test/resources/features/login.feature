@@ -58,6 +58,59 @@ Feature: apcrm app login functionality and verification
       | marketing@cybertekschool.com   | UserUser |
       | marketing99@cybertekschool.com | AbcZxy   |
 
+  @APCRM-449 @hr @helpdesk @marketing
+  Scenario: Users should not be able to try to login after 5 tries with invalid credentials.
+    When user enters "abc@xyz.com" username
+    And user enters "AbcZxy" password
+    And user clicks on login button
+    Then user should see "Incorrect login or password" message
+    When user enters "abc@xyz.com" username
+    And user enters "AbcZxy" password
+    And user clicks on login button
+    Then user should see "Incorrect login or password" message
+    When user enters "abc@xyz.com" username
+    And user enters "AbcZxy" password
+    And user clicks on login button
+    Then user should see "Incorrect login or password" message
+    When user enters "abc@xyz.com" username
+    And user enters "AbcZxy" password
+    And user clicks on login button
+    Then user should see "Incorrect login or password" message
+    When user enters "abc@xyz.com" username
+    And user enters "AbcZxy" password
+    And user clicks on login button
+    Then user should see "Incorrect login or password" message
+    But user should see "Please try again after one minute" message after 5 tries
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -13,15 +13,19 @@ public class LoginPage {
     @FindBy(css = "input[name='USER_LOGIN']")
     public WebElement userLoginInput;
     @FindBy(xpath = "//input[@name='USER_PASSWORD']")
-    public WebElement UserPasswordInput;
+    public WebElement userPasswordInput;
     @FindBy(css = "input[class='login-btn']")
     public WebElement loginButton;
 
-    @FindBy(css = "div[id='pagetitle']")
-    public WebElement activityStreamPageTitle;
+//    @FindBy(css = "div[id='pagetitle']")
+//    public WebElement activityStreamPageTitle;
 
     @FindBy(css = "div[class='errortext']")
     public WebElement errorMessage;
+
+    @FindBy(xpath = "//div[@class='errortext']") // may need to be updated
+    public WebElement errorMessageAfter5Tries; // update after 5 tries
+
 
     /**
      * This method will log in using credentials from configuration.properties
@@ -29,8 +33,8 @@ public class LoginPage {
     public void loginWithConfiguration() {
         // String url = ConfigurationReader.getProperty("apcrmUrl");
         // Driver.getDriver().get(ConfigurationReader.getProperty("apcrmUrl"));
-        // loginInput.sendKeys(ConfigurationReader.getProperty("loginUsername"));
-        // UserPasswordInput.sendKeys(ConfigurationReader.getProperty("loginPassword"));
+        // userLoginInput.sendKeys(ConfigurationReader.getProperty("loginUsername"));
+        // userPasswordInput.sendKeys(ConfigurationReader.getProperty("loginPassword"));
         // loginButton.click();
     }
 

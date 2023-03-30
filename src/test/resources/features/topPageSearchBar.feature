@@ -15,7 +15,7 @@ Feature: Top-page search bar functionality and verification
     Given user is on the activity stream page
 
 #AC1
-#  @marketing @helpdesk @hr
+
   @APCRM-436
   Scenario: User can see conversations
     When user enters "hr1@cybertekschool.com" into the top-page search bar
@@ -23,7 +23,7 @@ Feature: Top-page search bar functionality and verification
     Then user should see conversation about "hr1@cybertekschool.com" in the result page
 
 #AC2
-#  @marketing @helpdesk @hr
+
   @APCRM-437
   Scenario: User can find items related to written keyword
     When user enters "Quote.docx" into the top-page search bar
@@ -31,7 +31,7 @@ Feature: Top-page search bar functionality and verification
     Then user should see "Quote.docx" in the result page
 
 #AC3
-#  @marketing @helpdesk @hr
+
   @APCRM-438
   Scenario: User can find groups
     When user enters "Technology" into the top-page search bar
